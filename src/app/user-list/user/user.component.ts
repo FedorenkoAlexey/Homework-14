@@ -10,9 +10,9 @@ export class UserComponent {
   constructor() {}
 
   @Input() user: User;
-  @Output() getId: EventEmitter<User> = new EventEmitter<User>();
+  @Output() transferId: EventEmitter<number> = new EventEmitter<number>();
 
   getUserId() {
-    this.getId.emit();
+    this.transferId.emit(this.user.id);
   }
 }

@@ -1,1 +1,7 @@
 <p>post-list</p>
+<ul>
+  <li *ngFor="let post of posts">
+    <app-post [post]="post"></app-post>
+  </li>
+</ul>
+<!-- <app-post></app-post> -->

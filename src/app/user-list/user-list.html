@@ -5,4 +5,11 @@
   <li *ngFor="let user of users">{{ user.name }}</li>
 </ul> -->
 <!-- </div> -->
-<app-user *ngFor="let user of users" [user]="user"></app-user>
+<app-user
+  (transferId)="getPost($event)"
+  *ngFor="let user of users"
+  [user]="user"
+></app-user>
+<!-- <div *ngIf="posts">
+  <app-post-list [posts]="posts"></app-post-list>
+</div> -->

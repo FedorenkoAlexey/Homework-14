@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { Post } from "../../rest/post/post.model";
 
 @Component({
@@ -6,8 +6,10 @@ import { Post } from "../../rest/post/post.model";
   templateUrl: "./post.html"
   // styleUrls: ['./post.css']
 })
-export class PostComponent {
+export class PostComponent implements OnInit {
   constructor() {}
 
   @Input() post: Post;
+
+  ngOnInit(): void {}
 }
