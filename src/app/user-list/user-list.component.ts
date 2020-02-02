@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { ApiService } from "../rest/api.service";
-import { ShareService } from "../rest/share.service";
 import { User } from "../rest/user/user.model";
 import { Post } from "../rest/post/post.model";
 
@@ -10,7 +9,7 @@ import { Post } from "../rest/post/post.model";
   // styleUrls: ["./user-list.css"]
 })
 export class UserListComponent implements OnInit {
-  constructor(private api: ApiService, private share: ShareService) {}
+  constructor(private api: ApiService) {}
 
   users: User;
   posts: Post;
@@ -24,10 +23,6 @@ export class UserListComponent implements OnInit {
   ngOnInit() {
     this.api.getUsers();
   }
-
-  // getPost(event: any) {
-  //   this.share.transfId(event);
-  // }
 
   getPost(id: any) {
     this.api.getPosts(id).subscribe((posts: Post) => {
