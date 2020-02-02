@@ -1,12 +1,16 @@
-<p>user-list</p>
-<button (click)="getUsers()">Get</button>
+<button (click)="getUsers()">Get Users</button>
 
-<app-user
-  (transferId)="getPost($event)"
-  *ngFor="let user of users"
-  [user]="user"
-></app-user>
+<div class="container">
+  <div class="user-list">
+    <app-user
+      class="app-user"
+      (transferId)="getPost($event)"
+      *ngFor="let user of users"
+      [user]="user"
+    ></app-user>
+  </div>
 
-<div *ngIf="posts">
-  <app-post-list [posts]="posts"></app-post-list>
+  <div class="post-list" *ngIf="posts">
+    <app-post-list [posts]="posts"></app-post-list>
+  </div>
 </div>

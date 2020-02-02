@@ -3,8 +3,8 @@ import { Post } from "../../rest/post/post.model";
 
 @Component({
   selector: "app-post",
-  templateUrl: "./post.html"
-  // styleUrls: ['./post.css']
+  templateUrl: "./post.html",
+  styleUrls: ['./post.css']
 })
 export class PostComponent implements OnInit {
   constructor() {}

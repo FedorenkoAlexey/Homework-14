@@ -3,8 +3,8 @@ import { User } from "../../rest/user/user.model";
 
 @Component({
   selector: "app-user",
-  templateUrl: "./user.html"
-  // styleUrls: ['./user.css']
+  templateUrl: "./user.html",
+  styleUrls: ["./user.css"]
 })
 export class UserComponent {
   constructor() {}
