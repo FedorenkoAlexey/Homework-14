@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ApiService } from "../rest/api.service";
-import { from } from "rxjs";
+import { User } from "../rest/user/user.model";
 
 @Component({
   selector: "app-user-list",
@@ -10,12 +10,12 @@ import { from } from "rxjs";
 export class UserListComponent implements OnInit {
   constructor(private api: ApiService) {}
 
-  users: any;
+  users: User;
 
   getUsers(): void {
     this.api.getUsers();
     this.users = this.api.users;
-    console.log("TS: ", this.users.name);
+    console.log("TS: ", this.users);
   }
 
   ngOnInit() {
