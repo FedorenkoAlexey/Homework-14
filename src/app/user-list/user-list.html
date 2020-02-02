@@ -1,2 +1,8 @@
 <p>user-list</p>
+<button (click)="getUsers()">Get</button>
+<!-- <div *ngIf="response"> -->
+<ul>
+  <li *ngFor="let user of users">{{ user.name }}</li>
+</ul>
+<!-- </div> -->
 <app-user></app-user>

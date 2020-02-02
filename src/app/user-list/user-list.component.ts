@@ -10,5 +10,15 @@ import { from } from "rxjs";
 export class UserListComponent implements OnInit {
   constructor(private api: ApiService) {}
 
-  ngOnInit() {}
+  users: any;
+
+  getUsers(): void {
+    this.api.getUsers();
+    this.users = this.api.users;
+    console.log("TS: ", this.users.name);
+  }
+
+  ngOnInit() {
+    this.api.getUsers();
+  }
 }
